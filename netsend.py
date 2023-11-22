@@ -9,14 +9,14 @@ GPIO.setmode(GPIO.BOARD)
 #identify this device among other senders on the network
 THIS_BOARD = 0
 
-TARGET_ADDRESSES = ["192.168.0.7"]
+TARGET_ADDRESSES = ["192.168.0.7","192.168.0.21"]
 
 #set the GPIO input pins
 pirPin = 8
 
 GPIO.setup(pirPin, GPIO.IN)
 
-#subprocess.call("pd-extended yourpatch.pd &", shell=True)
+subprocess.call("puredata -nogui netreceive.pd &", shell=True)
 
 pirValue = 0
 
