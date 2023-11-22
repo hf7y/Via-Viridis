@@ -1,0 +1,17 @@
+#N canvas 1210 277 435 401 10;
+#X obj 31 30 netreceive 3000 1;
+#X obj 31 78 route 0 1 2 3;
+#X obj 37 211 osc~ 440;
+#X obj 37 284 dac~;
+#X obj 37 234 *~;
+#X obj 158 178 line;
+#X msg 157 141 \$1 100;
+#X floatatom 158 201 5 0 0 0 - - - 0;
+#X connect 0 0 1 0;
+#X connect 1 0 6 0;
+#X connect 2 0 4 0;
+#X connect 4 0 3 0;
+#X connect 4 0 3 1;
+#X connect 5 0 7 0;
+#X connect 6 0 5 0;
+#X connect 7 0 4 1;
